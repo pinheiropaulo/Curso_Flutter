@@ -4,6 +4,7 @@ import 'package:expenses/components/chart.dart';
 import 'package:expenses/components/transaction_form.dart';
 import 'package:expenses/components/transaction_list.dart';
 import 'package:expenses/models/transaction.dart';
+import 'package:expenses/themes/my_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,31 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
-      theme: tema.copyWith(
-        colorScheme: tema.colorScheme.copyWith(
-          primary: Colors.purple,
-          secondary: Colors.amber,
-        ),
-        appBarTheme: const AppBarTheme(
-          titleTextStyle: TextStyle(
-            fontFamily: 'OpenSans',
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        textTheme: tema.textTheme.copyWith(
-          headline6: const TextStyle(
-            fontFamily: 'OpenSans',
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-          button: const TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-      ),
+      theme: myTheme,
     );
   }
 }
