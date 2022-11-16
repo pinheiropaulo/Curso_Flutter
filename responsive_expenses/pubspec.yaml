@@ -83,13 +83,13 @@ flutter:
         - asset: asset\fonts\OpenSans-Bold.ttf
           weight: 700
 
-    - family: Quicksand
-      fonts:
-        - asset: asset\fonts\Quicksand-Regular.ttf
-        - asset: asset\fonts\Quicksand-Light.ttf
-        - asset: asset\fonts\Quicksand-Medium.ttf
-        - asset: asset\fonts\Quicksand-Bold.ttf
-          weight: 700
+    # - family: Quicksand
+    #   fonts:
+    #     - asset: asset\fonts\Quicksand-Regular.ttf
+    #     - asset: asset\fonts\Quicksand-Light.ttf
+    #     - asset: asset\fonts\Quicksand-Medium.ttf
+    #     - asset: asset\fonts\Quicksand-Bold.ttf
+    #       weight: 700
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
