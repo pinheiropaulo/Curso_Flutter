@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop/components/badge.dart';
-import 'package:shop/components/product_grid.dart';
-import 'package:shop/models/cart.dart';
-import 'package:shop/routes/app_routes.dart';
+import 'package:shop/src/components/app_drawer.dart';
+import 'package:shop/src/components/custom_badge.dart';
+import 'package:shop/src/components/product_grid.dart';
+import 'package:shop/src/models/cart_model.dart';
+import 'package:shop/src/routes/app_routes.dart';
 
 enum FilterOptions {
   favorite,
@@ -32,13 +33,13 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
             icon: const Icon(Icons.more_vert),
             itemBuilder: (_) => [
               const PopupMenuItem(
+                value: FilterOptions.all,
+                child: Text("Todos"),
+              ),
+              const PopupMenuItem(
                 value: FilterOptions.favorite,
                 child: Text("Somente Favoritos"),
               ),
-              const PopupMenuItem(
-                value: FilterOptions.all,
-                child: Text("Todos"),
-              )
             ],
             onSelected: (FilterOptions selectedValue) {
               setState(() {
@@ -65,6 +66,7 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
           )
         ],
       ),
+      drawer: const AppDrawer(),
       body: ProductGrid(
         showFavoriteOnly: _showFavoriteOnly,
       ),

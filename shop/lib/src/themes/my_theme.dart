@@ -7,7 +7,7 @@ ThemeData myTheme = ThemeData(
     secondary: Colors.deepOrange,
   ),
   textTheme: const TextTheme(
-    headline6: TextStyle(
+    titleLarge: TextStyle(
       fontFamily: 'Lato',
     ),
   ),
