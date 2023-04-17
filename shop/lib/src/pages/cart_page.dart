@@ -15,7 +15,7 @@ class CartPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Carrinho"),
+        title: const Text('Carrinho'),
       ),
       body: Column(
         children: [
@@ -30,7 +30,7 @@ class CartPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    "Total",
+                    'Total',
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -39,29 +39,41 @@ class CartPage extends StatelessWidget {
                   Chip(
                     backgroundColor: colorTheme.colorScheme.primary,
                     label: Text(
-                      "R\$ ${cart.totalAmount.toStringAsFixed(2)}",
+                      'R\$ ${cart.totalAmount.toStringAsFixed(2)}',
                       style: TextStyle(
                         color: colorTheme.primaryTextTheme.titleLarge?.color,
                       ),
                     ),
                   ),
                   const Spacer(),
-                  TextButton(
-                    onPressed: () {
-                      Provider.of<OrderList>(
-                        context,
-                        listen: false,
-                      ).addOrder(cart);
+                  Container(
+                    child: items.isEmpty
+                        ? TextButton(
+                            onPressed: null,
+                            style: TextButton.styleFrom(
+                              textStyle: TextStyle(
+                                color: colorTheme.colorScheme.primary,
+                              ),
+                            ),
+                            child: const Text('COMPRAR'),
+                          )
+                        : TextButton(
+                            onPressed: () {
+                              Provider.of<OrderList>(
+                                context,
+                                listen: false,
+                              ).addOrder(cart);
 
-                      cart.clear();
-                    },
-                    style: TextButton.styleFrom(
-                      textStyle: TextStyle(
-                        color: colorTheme.colorScheme.primary,
-                      ),
-                    ),
-                    child: const Text("COMPRAR"),
-                  )
+                              cart.clear();
+                            },
+                            style: TextButton.styleFrom(
+                              textStyle: TextStyle(
+                                color: colorTheme.colorScheme.primary,
+                              ),
+                            ),
+                            child: const Text('COMPRAR'),
+                          ),
+                  ),
                 ],
               ),
             ),
