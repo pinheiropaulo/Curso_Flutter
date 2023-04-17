@@ -27,18 +27,18 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Minha Loja"),
+        title: const Text('Minha Loja'),
         actions: [
           PopupMenuButton(
             icon: const Icon(Icons.more_vert),
             itemBuilder: (_) => [
               const PopupMenuItem(
                 value: FilterOptions.all,
-                child: Text("Todos"),
+                child: Text('Todos'),
               ),
               const PopupMenuItem(
                 value: FilterOptions.favorite,
-                child: Text("Somente Favoritos"),
+                child: Text('Somente Favoritos'),
               ),
             ],
             onSelected: (FilterOptions selectedValue) {

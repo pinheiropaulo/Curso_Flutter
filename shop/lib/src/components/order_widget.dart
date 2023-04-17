@@ -23,9 +23,9 @@ class _OrderWidgetState extends State<OrderWidget> {
       child: Column(
         children: [
           ListTile(
-            title: Text("R\$ ${widget.order.total.toStringAsFixed(2)}"),
+            title: Text('R\$ ${widget.order.total.toStringAsFixed(2)}'),
             subtitle: Text(
-              DateFormat("dd/MM/yyyy hh:mm").format(widget.order.date),
+              DateFormat('dd/MM/yyyy hh:mm').format(widget.order.date),
             ),
             trailing: IconButton(
               icon: const Icon(Icons.expand_more),
@@ -57,7 +57,7 @@ class _OrderWidgetState extends State<OrderWidget> {
                           ),
                         ),
                         Text(
-                          "${product.quantity}x R\$ ${product.price}",
+                          '${product.quantity}x R\$ ${product.price}',
                           style: const TextStyle(
                             fontSize: 18,
                             color: Colors.grey,

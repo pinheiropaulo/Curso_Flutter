@@ -34,6 +34,29 @@ class CartItemComponent extends StatelessWidget {
           size: 40,
         ),
       ),
+      confirmDismiss: (_) {
+        return showDialog<bool>(
+          context: context,
+          builder: (ctx) => AlertDialog(
+            title: const Text('Tem Certeza?'),
+            content: const Text('Quer remover o item do carrinho?'),
+            actions: [
+              TextButton(
+                child: const Text('Não'),
+                onPressed: () {
+                  Navigator.of(ctx).pop(false);
+                },
+              ),
+              TextButton(
+                child: const Text('Sim'),
+                onPressed: () {
+                  Navigator.of(ctx).pop(true);
+                },
+              )
+            ],
+          ),
+        );
+      },
       onDismissed: (_) {
         Provider.of<Cart>(
           context,
@@ -49,7 +72,7 @@ class CartItemComponent extends StatelessWidget {
               padding: const EdgeInsets.all(4),
               child: FittedBox(
                 child: Text(
-                  "${cartItem.price}",
+                  '${cartItem.price}',
                   style: const TextStyle(
                     color: Colors.white,
                   ),
@@ -58,8 +81,10 @@ class CartItemComponent extends StatelessWidget {
             ),
           ),
           title: Text(cartItem.name),
-          subtitle: Text("Total: R\$ ${cartItem.price * cartItem.quantity}"),
-          trailing: Text("${cartItem.quantity} x"),
+          subtitle: Text(
+            'Total: R\$ ${(cartItem.price * cartItem.quantity).toStringAsFixed(2)}',
+          ),
+          trailing: Text('${cartItem.quantity} x'),
         ),
       ),
     );
