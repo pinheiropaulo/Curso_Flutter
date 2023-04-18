@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop/src/models/cart_model.dart';
-import 'package:shop/src/models/product_model.dart';
+import 'package:shop/src/models/cart/cart_model.dart';
+import 'package:shop/src/models/product/product_model.dart';
 import 'package:shop/src/routes/app_routes.dart';
 
 class ProductGridItem extends StatelessWidget {
@@ -25,6 +25,21 @@ class ProductGridItem extends StatelessWidget {
             builder: (ctx, product, _) => IconButton(
               onPressed: () {
                 product.toggleFavorite();
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: const Text(
+                      'Produto adicionado os favoritos com sucesso!',
+                    ),
+                    duration: const Duration(seconds: 2),
+                    action: SnackBarAction(
+                      label: 'DESFAZER',
+                      onPressed: () {
+                        product.toggleFavorite();
+                      },
+                    ),
+                  ),
+                );
               },
               icon: Icon(
                 product.isFavorite ? Icons.favorite : Icons.favorite_border,

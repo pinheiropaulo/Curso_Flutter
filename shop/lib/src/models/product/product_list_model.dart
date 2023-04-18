@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:shop/src/data/dummy_data.dart';
-import 'package:shop/src/models/product_model.dart';
+import 'package:shop/src/models/product/product_model.dart';
 
 class ProductsList with ChangeNotifier {
   final List<Product> _items = dummyProducts;

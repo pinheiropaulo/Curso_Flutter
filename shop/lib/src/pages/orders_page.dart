@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/src/components/app_drawer.dart';
 import 'package:shop/src/components/order_widget.dart';
-import 'package:shop/src/models/order_list.dart';
+import 'package:shop/src/models/order/order_list.dart';
 
 class OrdersPage extends StatelessWidget {
   const OrdersPage({super.key});

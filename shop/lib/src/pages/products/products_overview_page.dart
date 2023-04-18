@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/src/components/app_drawer.dart';
 import 'package:shop/src/components/custom_badge.dart';
-import 'package:shop/src/components/product_grid.dart';
-import 'package:shop/src/models/cart_model.dart';
+import 'package:shop/src/components/product/product_grid.dart';
+import 'package:shop/src/models/cart/cart_model.dart';
 import 'package:shop/src/routes/app_routes.dart';
 
 enum FilterOptions {

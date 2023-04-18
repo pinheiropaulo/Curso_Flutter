@@ -4,7 +4,7 @@
 # This file should be version controlled.
 
 version:
-  revision: 62bd79521d8d007524e351747471ba66696fc2d4
+  revision: 4b12645012342076800eb701bcdfe18f87da21cf
   channel: stable
 
 project_type: app
@@ -13,11 +13,8 @@ project_type: app
 migration:
   platforms:
     - platform: root
-      create_revision: 62bd79521d8d007524e351747471ba66696fc2d4
-      base_revision: 62bd79521d8d007524e351747471ba66696fc2d4
-    - platform: windows
-      create_revision: 62bd79521d8d007524e351747471ba66696fc2d4
-      base_revision: 62bd79521d8d007524e351747471ba66696fc2d4
+      create_revision: 4b12645012342076800eb701bcdfe18f87da21cf
+      base_revision: 4b12645012342076800eb701bcdfe18f87da21cf
 
   # User provided section
 
@@ -26,5 +23,5 @@ migration:
   #
   # Files that are not part of the templates will be ignored by default.
   unmanaged_files:
-    - 'lib/main.dart'
-    - 'ios/Runner.xcodeproj/project.pbxproj'
+    - "lib/main.dart"
+    - "ios/Runner.xcodeproj/project.pbxproj"
