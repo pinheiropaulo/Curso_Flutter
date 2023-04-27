@@ -1,18 +1,20 @@
 name: shop
 description: Projeto feito durante o curso de Flutter da Cod3r.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.6 <3.0.0'
+  sdk: ">=2.18.6 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   provider: ^6.0.5
   intl: ^0.18.0
+  http: ^0.13.5
+  flutter_dotenv: ^5.0.2
 
   #
   cupertino_icons: ^1.0.2
@@ -24,13 +26,14 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
-
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
