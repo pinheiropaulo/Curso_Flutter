@@ -30,21 +30,23 @@ class Cart with ChangeNotifier {
       _items.update(
         product.id,
         (existingItem) => CartItemModel(
-            id: existingItem.id,
-            productId: existingItem.productId,
-            name: existingItem.name,
-            quantity: existingItem.quantity + 1,
-            price: existingItem.price),
+          id: existingItem.id,
+          productId: existingItem.productId,
+          name: existingItem.name,
+          quantity: existingItem.quantity + 1,
+          price: existingItem.price,
+        ),
       );
     } else {
       _items.putIfAbsent(
         product.id,
         () => CartItemModel(
-            id: Random().nextDouble().toString(),
-            productId: product.id,
-            name: product.name,
-            quantity: 1,
-            price: product.price),
+          id: Random().nextDouble().toString(),
+          productId: product.id,
+          name: product.name,
+          quantity: 1,
+          price: product.price,
+        ),
       );
     }
     notifyListeners();
