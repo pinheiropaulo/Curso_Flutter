@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shop/my_app.dart';
+import 'package:shop/src/utils/env/env.dart';
 
 void main() async {
-  await dotenv.load(fileName: '.env');
+  WidgetsFlutterBinding.ensureInitialized();
+  await Env.instance.load();
+
   runApp(const MyApp());
 }
