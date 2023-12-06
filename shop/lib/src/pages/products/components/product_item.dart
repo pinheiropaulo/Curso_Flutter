@@ -57,7 +57,7 @@ class ProductItems extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).pop(true);
                         },
-                      )
+                      ),
                     ],
                   ),
                 ).then((value) async {

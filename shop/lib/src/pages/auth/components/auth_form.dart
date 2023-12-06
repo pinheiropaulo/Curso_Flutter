@@ -91,7 +91,7 @@ class _AuthFormState extends State<AuthForm>
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
             child: const Text('Fechar'),
-          )
+          ),
         ],
       ),
     );
@@ -234,7 +234,7 @@ class _AuthFormState extends State<AuthForm>
                 child: Text(
                   _isLogin() ? 'DESEJA REGISTRAR ? ' : 'JÁ POSSUI CONTA ?',
                 ),
-              )
+              ),
             ],
           ),
         ),

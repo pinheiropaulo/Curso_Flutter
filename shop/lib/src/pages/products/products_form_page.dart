@@ -117,7 +117,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
           IconButton(
             onPressed: _submitForm,
             icon: const Icon(Icons.save),
-          )
+          ),
         ],
       ),
       body: _isLoading
@@ -251,7 +251,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
                                   _imageUrlController.text,
                                   fit: BoxFit.cover,
                                 ),
-                        )
+                        ),
                       ],
                     ),
                   ],

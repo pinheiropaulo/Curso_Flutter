@@ -52,7 +52,7 @@ class CartItemComponent extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(ctx).pop(true);
                 },
-              )
+              ),
             ],
           ),
         );

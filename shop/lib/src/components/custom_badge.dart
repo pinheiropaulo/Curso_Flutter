@@ -39,7 +39,7 @@ class CustomBadge extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

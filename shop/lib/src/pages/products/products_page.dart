@@ -30,7 +30,7 @@ class ProductsPage extends StatelessWidget {
                 AppRoutes.productForm,
               );
             },
-          )
+          ),
         ],
       ),
       drawer: const AppDrawer(),
